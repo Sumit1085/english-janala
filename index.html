@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title and logo -->
+    <title>English Janala | Best for learning English</title>
+    <link rel="shortcut icon" href="assets\logo.png" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Integration -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Tailwind Daizy Ui -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- css -->
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="">
+        <div class="navbar bg-base-100 shadow-sm bg-[#badeff42]">
+            <div class="flex-1">
+                <a class="btn btn-ghost text-xl">English <img src="./assets/logo.png" alt="">জানালা</a>
+            </div>
+            <div class="flex-none">
+                <ul class="menu menu-horizontal px-1 ">
+                    <li class="border border-[#422AD5] text-[#422AD5] font-semibold text-sm rounded-sm"><a><img src="./assets/fa-circle-question.png" alt="">FAQ</a></li>
+                    <li class="border border-[#422AD5] text-[#422AD5] font-semibold  text-sm mx-4 rounded-sm"><a><img src="./assets/fa-book-open.png" alt="">LEARN</a></li>
+                    <li class="border border-[#422AD5] text-[#422AD5] font-semibold  text-sm rounded-sm"><a><img src="./assets/fa-arrow-right-from-bracket.png" alt="">LOGOUT</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section id="hero" class="w-10/12 mx-auto my-20 flex flex-col-reverse md:flex-row justify-between items-center ">
+        <div class="hero-left w-1/2 text-center md:text-left">
+            <h1 class="text-3xl md:text-5xl font-bold"><span class="text-accent">English</span> is Easy!!</h1>
+            <p class="my-6 ">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
+            <div class="space-y-5 flex flex-col">
+                <input type="text" placeholder="Enter Your Name" class="input" />
+                <input type="text" placeholder="*********" class="input" />
+            </div>
+            <button class="btn my-5 bg-[#422AD5] text-white">Get Started</button>
+        </div>
+        <div class="hero-right w-1/2">
+            <img src="./assets/hero-student.png" alt="">
+        </div>
+    </section>
+
+    <section>
+        <h1 class="text-4xl text-center md:text-5xl font-bold"><span class="text-accent">Let's </span>Learn Vocabularies</h1>
+        <div id="level-container" class="flex flex-wrap justify-center gap-5 my-10">
+
+        </div>
+    </section>
+
+    <section class="flex justify-center py-5">
+        <div class="join">
+            <div>
+                <label class="input validator join-item">
+                <input id="input-search" type="email" placeholder="search Vocabularies" required />
+                </label>
+            </div>
+            <button id="btn-search" class="btn btn-primary join-item">Search</button>
+        </div>
+    </section>
+ 
+    <section id="spinner" class="flex justify-center items-center py-10 hidden">
+        <span class="loading loading-infinity loading-xl"></span>
+    </section>
+
+    <section id="word-container" class="bg-gray-100 p-10 w-11/12 mx-auto grid grid-cols-3 gap-5">
+        <div class="col-span-full text-center">
+            <h2 class="text-[13.5px] text-[#79716B]">এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি।</h2>
+            <p class="text-[#292524] text-4xl mt-3">নেক্সট Lesson এ যান</p>
+        </div>
+    </section>
+
+   
+
+    <!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+<dialog id="word_modal" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+   <div id="details-container" class="space-y-5">
+        <div>
+            <h2 class="text-2xl font-bold">Eager (<i class="fa-solid fa-microphone-lines"></i>:ইগার)</h2>
+        </div>
+        <div>
+            <h2 class="font-bold">Meaning</h2>
+            <p >আগ্রহী</p>
+        </div>
+        <div>
+            <h2 class="font-bold">Example</h2>
+            <p >The kids were eager to open their gifts.</p>
+        </div>
+        <div>
+            <h2 class="font">সমার্থক শব্দ গুলো : </h2>
+            <span class="btn">SYm1</span>
+            <span class="btn">SYm2</span>
+            <span class="btn">SYm3</span>
+        </div>
+   </div>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+    <script src="./script/index.js"></script>
+</body>
+</html>
